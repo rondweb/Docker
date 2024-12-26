@@ -43,6 +43,8 @@ RUN pip install --upgrade pip setuptools wheel numpy pyarrow dspy
 
 EXPOSE 8080
 ENV N8N_PORT=8080
+
+#FOR GCP docker buildx build --platform linux/amd64 -t rondweb/n8n8080:linux -f Docker2.dockerfile .
 ENV N8N_HOST=0.0.0.0
 
 CMD ["n8n", "start"]
